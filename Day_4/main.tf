@@ -4,5 +4,5 @@ provider "aws"{
 
 resource "aws_s3_bucket" "StateFile" {
   bucket = "statefiledemo"
-  bucket_prefix = "lokesh/terraform/"
+  bucket_prefix = "statefiledemo/terraform/"
 }
