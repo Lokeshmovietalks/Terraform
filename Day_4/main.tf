@@ -3,7 +3,7 @@ provider "aws"{
 }
 
 resource "aws_s3_bucket" "StateFile" {
-  bucket = "statefiledemo_lokesh_220299"
+  bucket = "statefiledemo-lokesh-220299"
 }
 
 resource "aws_dynamodb_table" "Lock" {
