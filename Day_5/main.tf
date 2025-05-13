@@ -18,7 +18,7 @@ resource "aws_key_pair" "myKey" {
 resource "aws_subnet" "Sub1" {
   vpc_id = aws_vpc.myVPC.id
   cidr_block = "10.0.0.0/24"
-  availability_zone = "ap-southeast-1a"
+  availability_zone = "ap-southeast-2a"
   map_public_ip_on_launch = true
 }
 
