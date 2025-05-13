@@ -86,8 +86,8 @@ resource "aws_instance" "name" {
         "sudo yum update -y",
         "sudo yum install -y python3-pip",
         "cd /home/ec2-user",
-        "sudo pip3 install flask",
-        "sudo nohup python3 /home/ec2-user/app.py > app.log 2>&1 &"
+        "pip3 install flask --user",
+        "nohup python3 /home/ec2-user/app.py > app.log 2>&1 &"
      ]
   }
 }
