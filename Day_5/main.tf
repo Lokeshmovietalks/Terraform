@@ -89,13 +89,13 @@ resource "aws_instance" "name" {
 
   provisioner "remote-exec" {
     inline = [ 
-        "echo 'Hello welcome to the ec2-instance'",
-        "sudo yum update -y",
-        "sudo yum install -y python3-pip",
-        "cd /home/ec2-user",
-        "sudo pip3 install Flask",
-        "sudo pip3 install flask",
-        "bash -c 'sudo nohup python3 /home/ec2-user/app.py > app.log 2>&1 & disown'"
+      "echo 'Hello from the remote instance'",
+      "sudo yum update -y",  # Update package lists (for ubuntu)
+      "sudo yum install -y python3-pip",  # Example package installation
+      "cd /home/ec2-user",
+      "sudo pip3 install Flask",
+      #"sudo python3 app.py &",
+      "bash -c 'nohup python3 /home/ec2-user/app.py > home/ec2-user/app.log 2>&1 & disown'"
      ]
   }
 }
